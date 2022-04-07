@@ -15,10 +15,10 @@ import java.util.Set;
 public class City {
 
     @Id
-    Long id;
-    String name;
-    String state;
+    private Long id;
+    private String name;
+    private String state;
 
     @OneToMany(mappedBy = "city")
-    Set<Theater> theaters;
+    private Set<Theater> theaters;
 }

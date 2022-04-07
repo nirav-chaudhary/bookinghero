@@ -15,19 +15,20 @@ import java.util.Date;
 public class Movie {
 
     @Id
-    Long id;
+    private Long id;
 
-    String name;
-    Date releaseDate;
-    Date duration;
-    String description;
+    private String name;
+    private Date releaseDate;
+    private Date duration;
+    private String description;
+    private Integer rating;
 
     @ManyToOne
     @JoinColumn(name="language_id",nullable = false)
-    Language language;
+    private Language language;
 
     @ManyToOne
     @JoinColumn(name="genre_id")
-    Genre genre;
+    private Genre genre;
 
 }

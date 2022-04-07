@@ -4,10 +4,8 @@ package com.nirav.bookinghero.entity;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -15,12 +13,15 @@ import javax.persistence.ManyToOne;
 public class Screen {
 
     @Id
-    Long id;
-    String name;
+    private Long id;
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "theater_id", nullable = false)
-    Theater theater;
+    private Theater theater;
 
-    Integer seats;
+    private Integer seats;
+
+    @OneToMany(mappedBy = "screen")
+    private Set<Show> shows;
 }

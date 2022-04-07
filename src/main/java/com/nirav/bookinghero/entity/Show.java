@@ -13,17 +13,16 @@ import java.util.Date;
 public class Show {
 
     @Id
-    Long id;
+    private Long id;
 
-    Date startDate;
-
-    Date endDate;
+    private Date startDate;
+    private Date endDate;
 
     @ManyToOne
     @JoinColumn(name = "screen_id", nullable = false)
-    Screen screen;
+    private Screen screen;
 
     @ManyToOne
     @JoinColumn(name = "movie_id", nullable = false)
-    Movie movie;
+    private Movie movie;
 }

@@ -12,16 +12,16 @@ import java.util.Set;
 public class Theater {
 
     @Id
-    Long id;
+    private Long id;
 
-    String name;
+    private String name;
 
     @ManyToOne
     @JoinColumn(name = "cart_id", nullable = false)
-    City city;
+    private City city;
 
     @OneToMany(mappedBy = "theater")
-    Set<Screen> screens;
+    private Set<Screen> screens;
 
-    Integer totalSeats;
+    private Integer totalSeats;
 }

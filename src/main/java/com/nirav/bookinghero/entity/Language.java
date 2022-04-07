@@ -13,6 +13,6 @@ import javax.persistence.Id;
 public class Language {
 
     @Id
-    Long id;
-    String name;
+    private Long id;
+    private String name;
 }
