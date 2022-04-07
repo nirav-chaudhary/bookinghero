@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -25,4 +26,7 @@ public class Show {
     @ManyToOne
     @JoinColumn(name = "movie_id", nullable = false)
     private Movie movie;
+
+    @OneToMany(mappedBy = "show")
+    private Set<ShowSeat> showSeats;
 }
