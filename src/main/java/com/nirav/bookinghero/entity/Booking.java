@@ -25,7 +25,7 @@ public class Booking {
     @JoinColumn(name = "show_id",nullable = false)
     private Show show;
 
-    @OneToMany
+    @OneToMany(mappedBy = "booking")
     private Set<ShowSeat> seatsBooked;
 
     private BookingStatus bookingStatus;
