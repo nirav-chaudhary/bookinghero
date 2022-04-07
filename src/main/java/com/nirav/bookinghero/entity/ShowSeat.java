@@ -25,5 +25,9 @@ public class ShowSeat {
     @JoinColumn(name = "cinema_seat_id",nullable = false)
     private CinemaSeat cinemaSeat;
 
+    @ManyToOne
+    @JoinColumn(name = "booking_id",nullable = true)
+    private Booking booking;
+
     private Double price;
 }
